@@ -36,14 +36,14 @@ w, b = train(X, Y, iterations=10_000, lr=0.01)
 print('w = %.3f, b = %.3f' % (w, b))
 print('Prediction: x = %d => y = %.2f' % (20, predict(20, w, b)))
 
-sns.set()                                                # activate Seaborn
-plt.axis([0, 50, 0, 50])                                 # scale axes (0 to 50)
-plt.xticks(fontsize=15)                                  # set x axis ticks
-plt.yticks(fontsize=15)                                  # set y axis ticks
-plt.xlabel("Reservations", fontsize=15)                  # set x axis label
-plt.ylabel("Pizzas", fontsize=15)                        # set y axis label
-plt.plot(X, Y, "bo")                                     # plot data
+sns.set()
+plt.axis([0, 50, 0, 50]
+plt.xticks(fontsize=15)
+plt.yticks(fontsize=15)
+plt.xlabel("Reservations", fontsize=15)
+plt.ylabel("Pizzas", fontsize=15)
+plt.plot(X, Y, "bo")
 x = np.linspace(0, 50, 100)
 y = x * w + b
 plt.plot(x, y, '-r', label='y = {w} * w + {b}')
-plt.show()                                               # display chart
+plt.show()
